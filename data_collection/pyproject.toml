@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "data_collection"
+version = "0.1.0"
+description = ""
+authors = ["Andolsi-Hamza05 <hamza.landolsi@essai.ucar.tn>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+selenium = "^4.38.0"
+webdriver-manager = "^4.0.2"
+cloudscraper = "^1.2.71"
+beautifulsoup4 = "^4.14.2"
+pandas = "^2.3.3"
+fake-useragent = "^2.2.0"
+lxml = "^6.0.2"
+tqdm = "^4.67.1"
+html5lib = "^1.1"
+fastparquet = "^2024.11.0"
+hdfs = "^2.7.3"
+fastapi = "^0.121.3"
+uvicorn = {extras = ["standard"], version = "^0.38.0"}
+pydantic = "^2.12.4"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^7.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
