@@ -1,0 +1,6 @@
+{
+  "log_dir": "logs",
+  "level": "INFO",
+  "console": true,
+  "filename_prefix": "data_collection"
+}

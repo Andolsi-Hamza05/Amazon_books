@@ -1,0 +1,17 @@
+{
+  "BASE_DIR": "bronze",
+  "IMAGES_DIR": "images",
+  "TEXT_DIR": "about_item",
+  "HEADLESS": false,
+  "MAX_PER_CATEGORY": 20,
+  "DELAY_RANGE": [1.8, 4.2],
+  "BASE_SEARCH_URL": "https://www.amazon.com/s?i=fashion-mens-intl-ship&bbn=16225019011&rh=n:7141123011,n:16225019011,n:7147441011,n:1040658,",
+  "CATEGORIES": {
+    "mens_shirts": "n:2476517011",
+    "mens_sweaters": "n:1044442",
+    "mens_jackets_coats": "n:1045830",
+    "mens_jeans": "n:1045564",
+    "mens_pants": "n:1045558",
+    "mens_shorts": "n:1045560"
+  }
+}
