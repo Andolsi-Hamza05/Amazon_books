@@ -1,0 +1,21 @@
+services:
+  spark:
+    image: jupyter/pyspark-notebook:latest
+    container_name: data-processing
+    volumes:
+      - ../data/bronze:/home/hamza/data/bronze:ro
+      - ../data/silver:/home/hamza/data/silver
+      - ./etl:/home/hamza/work
+    working_dir: /home/hamza/data_processing/
+    environment:
+      - PYSPARK_PYTHON=python3
+      - SPARK_MASTER_HOST=localhost
+    ports:
+      - "8080:8080"
+      - "4040:4040"
+    command: tail -f /dev/null
+    healthcheck:
+      test: ["CMD", "true"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

@@ -225,7 +225,25 @@ def extract_title(soup): return soup.select_one("#productTitle").get_text(strip=
 
 
 def extract_price(soup):
-    return "N/A"
+    try:
+        whole = soup.select_one(".a-price-whole")
+        fraction = soup.select_one(".a-price-fraction")
+        symbol = soup.select_one(".a-price-symbol")
+
+        if not whole or not symbol:
+            return None
+
+        whole_text = whole.get_text(strip=True)
+        fraction_text = fraction.get_text(strip=True) if fraction else ""
+        symbol_text = symbol.get_text(strip=True)
+
+        if fraction_text:
+            return f"{whole_text}{fraction_text} {symbol_text}"
+        else:
+            return f"{whole_text} {symbol_text}"
+
+    except:
+        return None
 
 def extract_rating(soup):
     el = soup.select_one('span.a-icon-alt')
